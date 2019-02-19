@@ -9,13 +9,16 @@ class Pokemon extends PureComponent {
         <button
           type="button"
           className="pokemon__sprite"
+          id={`${pokemon.name}_image`}
           style={{
             backgroundImage: `url(${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
               pokemon.id
             }.png`})`
           }}
         />
-        <p className="pokemon__name">{pokemon.name}</p>
+        <p className="pokemon__name" id={`${pokemon.name}_text`}>
+          {pokemon.name}
+        </p>
       </div>
     )
   }
